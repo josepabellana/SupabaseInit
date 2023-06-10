@@ -4,7 +4,8 @@
   "description": "Todo List con Supabase",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git add . && git commit -m 'x' && git push",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/josepabellana/SupabaseInit#readme",
   "dependencies": {
-    "supabase": "^1.62.3"
+    "@supabase/supabase-js": "^2.24.0",
+    "dotenv": "^16.1.4",
+    "nodemon": "^2.0.22"
   }
 }
