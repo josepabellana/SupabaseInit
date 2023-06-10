@@ -10,7 +10,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 async function insertData() {
     const { data, error } = await supabase
       .from('users')
-      .insert([{ name: 'John Doe', email: 'johndoe@example.com' }]);
+      .insert([{ name: 'Georgina Grant', email: 'ginagrantc@gmail.com' }]);
   
     if (error) {
       console.error(error);
@@ -18,6 +18,18 @@ async function insertData() {
       console.log('Data inserted successfully:', data);
     }
   }
+
+
+
+  async function insertGoal(title, description, dueDate) {
+    const { data, error } = await supabase.from('goals').insert([
+      { title, description, due_date: dueDate, status: 'pendiente' }
+    ]);
   
-  insertData();
+    if (error) {
+      console.error(error);
+    } else {
+      console.log('Goal inserted successfully:', data);
+    }
+  }
   
